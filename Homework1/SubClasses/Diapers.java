@@ -17,6 +17,6 @@ public class Diapers extends HygieneItems {
 
     @Override
     public String toString() {
-        return String.format("%s\nSize: %s\nMin weight: %f\nMax weight: %f\nSex type: %s", super.toString(), this.size, this.minWeight, this.maxWeight, this.type);
+        return String.format("%s\nSize: %s\nMin weight: %f\nMax weight: %f\nType: %s", super.toString(), this.size, this.minWeight, this.maxWeight, this.type);
     }
 }
