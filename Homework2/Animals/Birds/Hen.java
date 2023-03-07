@@ -7,7 +7,7 @@ public class Hen extends Bird {
     }
 
     public Hen() {
-        super(30, 3, "Рябая", 1);
+        super(30, 3, "Коричневый", 1);
     }
 
     @Override

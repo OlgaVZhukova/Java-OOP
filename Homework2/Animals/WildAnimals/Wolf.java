@@ -8,17 +8,26 @@ public class Wolf extends WildAnimals{
         this.alpha = alpha;
     }
 
+    public Wolf() {
+        super(85, 50, "Золотой", "Повсеместно", "20.08.2022");
+        this.alpha = false;
+    }
+
+    @Override
     public void makeSound() {
         System.out.println("Аууууууууууу!");
     }
 
+    @Override
     public void printAnimalInfo() {
         System.out.println("\nWolf");
         System.out.printf("Eyes color: %s\n", this.eyesColor);
         System.out.printf("Height: %s\n", this.height);
         System.out.printf("Weight: %.3f\n", this.weight);
         System.out.printf("Habitat: %s\n", this.habitat);
-        System.out.printf("Date of finding: %s\n", this.dateDiscovery);
-        System.out.printf("Leader: %s\n", this.alpha);
+        System.out.printf("Date of Discovery: %s\n", this.dateDiscovery);
+        System.out.printf("Alpha: %s\n", this.alpha);
     }
+
+    public boolean getLeader(){return this.alpha;}
 }

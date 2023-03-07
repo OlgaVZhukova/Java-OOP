@@ -7,7 +7,7 @@ public class Stork extends Bird {
     }
 
     public Stork() {
-        super(70, 2, "Белый", 100);
+        super(70, 2, "Серый", 100);
     }
 
     @Override

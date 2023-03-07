@@ -2,13 +2,18 @@ package Homework2.Animals.Pets;
 
 public class Dog extends Pets{
     private boolean training;
-    
+    private static int dogNamesCounter = 1;
+
     protected Dog(int height, double weight, String eyesColor, String name, String breed, boolean vaccinations,
             String woolColor, String birthday) {
         super(height, weight, eyesColor, name, breed, vaccinations, woolColor, birthday);
     }
 
-    public boolean getTraining(){return this.training;}
+    public Dog() {
+        super(70, 15, "Синий", String.format("Dog %d", dogNamesCounter++), "cur", false, "Черный", "01.01.2020");
+        this.training = false;
+    }
+
 
     public void showFondling() {
         System.out.println("Я счастливый пёс!");
@@ -17,7 +22,7 @@ public class Dog extends Pets{
     public void makeSound() {
         System.out.println("Гав! Гав! Гав!");
     }
-
+    
     public void printAnimalInfo() {
         System.out.println("\nDog");
         System.out.printf("Name: %s\n", this.name);
@@ -30,4 +35,6 @@ public class Dog extends Pets{
         System.out.printf("Vaccinations: %b\n", this.vaccinations);
         System.out.printf("Training: %b\n", this.training);
     }
+    
+    public boolean getTraining(){return this.training;}
 }

@@ -2,13 +2,18 @@ package Homework2.Animals.Pets;
 
 public class Cat extends Pets{
     private final boolean woolPresence;
+    private static int catNamesCounter = 1;
 
     protected Cat(int height, double weight, String eyesColor, String name, String breed, boolean vaccinations, String woolColor, String birthday, boolean woolPresence) {
         super(height, weight, eyesColor, name, breed, vaccinations, woolColor, birthday);
         this.woolPresence = woolPresence;
     }
 
-    //@Override
+    public Cat() {
+        super(50, 4.3, "Зеленый", String.format("Cat %d", catNamesCounter++), "Noname", false, "black", "08.03.2022");
+        this.woolPresence = true;
+    }
+
     public void showFondling() {
         System.out.println("Я счастливый котик!");
     }
@@ -29,4 +34,5 @@ public class Cat extends Pets{
         System.out.printf("Vaccinations: %b\n", this.vaccinations);
         System.out.printf("Wool presence: %b\n", this.woolPresence);
     }
+    public boolean getWool(){ return this.woolPresence;}
 }
