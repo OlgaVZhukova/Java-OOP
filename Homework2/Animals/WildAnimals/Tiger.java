@@ -1,6 +1,6 @@
 package Homework2.Animals.WildAnimals;
 
-public class Tiger implements WildAnimals{
+public class Tiger extends WildAnimals{
     public Tiger(int height, double weight, String eyesColor, String habitat, String dateDiscovery) {
         super(height, weight, eyesColor, habitat, dateDiscovery);
     }

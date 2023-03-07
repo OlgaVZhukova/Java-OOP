@@ -1,10 +1,15 @@
 package Homework2.Animals.Pets;
 
-public class Dog implements Pets{
+public class Dog extends Pets{
     private boolean training;
+    
+    protected Dog(int height, double weight, String eyesColor, String name, String breed, boolean vaccinations,
+            String woolColor, String birthday) {
+        super(height, weight, eyesColor, name, breed, vaccinations, woolColor, birthday);
+    }
+
     public boolean getTraining(){return this.training;}
 
-    //@Override
     public void showFondling() {
         System.out.println("Я счастливый пёс!");
     }

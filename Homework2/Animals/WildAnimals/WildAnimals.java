@@ -1,14 +1,20 @@
 package Homework2.Animals.WildAnimals;
 
-public interface WildAnimals implements Animals {
-    public static String habitat;
-    public static String dateDiscovery;
 
-    //public void makeSound();
+public abstract class WildAnimals {
+    protected int height;
+    protected double weight;
+    protected String eyesColor;
+    public String habitat;
+    public String dateDiscovery;
 
-    public WildAnimal(int height, double weight, String eyesColor, String habitat, String dateDiscovery) {
-        //super(height, weight, eyesColor);
+    protected WildAnimals(int height, double weight, String eyesColor, String habitat, String dateDiscovery) {
+        this.height = height;
+        this.weight = weight;
+        this.eyesColor = eyesColor;
         this.habitat = habitat;
         this.dateDiscovery = dateDiscovery;
     }
+    public abstract void makeSound();
+    public abstract void printAnimalInfo();    
 }

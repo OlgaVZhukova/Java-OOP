@@ -1,6 +1,6 @@
 package Homework2.Animals.WildAnimals;
 
-public class Wolf implements WildAnimals{
+public class Wolf extends WildAnimals{
     private boolean alpha;
 
     public Wolf(int height, double weight, String eyesColor, String habitat, String dateDiscovery, boolean alpha) {
@@ -19,6 +19,6 @@ public class Wolf implements WildAnimals{
         System.out.printf("Weight: %.3f\n", this.weight);
         System.out.printf("Habitat: %s\n", this.habitat);
         System.out.printf("Date of finding: %s\n", this.dateDiscovery);
-        System.out.printf("Leader: %s\n", this.leader);
+        System.out.printf("Leader: %s\n", this.alpha);
     }
 }
