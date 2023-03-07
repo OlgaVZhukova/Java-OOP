@@ -7,4 +7,18 @@ public class Wolf implements WildAnimals{
         super(height, weight, eyesColor, habitat, dateDiscovery);
         this.alpha = alpha;
     }
+
+    public void makeSound() {
+        System.out.println("Аууууууууууу!");
+    }
+
+    public void printAnimalInfo() {
+        System.out.println("\nWolf");
+        System.out.printf("Eyes color: %s\n", this.eyesColor);
+        System.out.printf("Height: %s\n", this.height);
+        System.out.printf("Weight: %.3f\n", this.weight);
+        System.out.printf("Habitat: %s\n", this.habitat);
+        System.out.printf("Date of finding: %s\n", this.dateDiscovery);
+        System.out.printf("Leader: %s\n", this.leader);
+    }
 }
