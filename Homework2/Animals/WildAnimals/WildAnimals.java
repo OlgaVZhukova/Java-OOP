@@ -1,6 +1,6 @@
 package Homework2.Animals.WildAnimals;
 
-public interface WildAnimals {
+public interface WildAnimals implements Animals {
     public static String habitat;
     public static String dateDiscovery;
 
