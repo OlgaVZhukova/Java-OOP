@@ -7,7 +7,7 @@ public class Hen extends Bird {
     }
 
     public Hen() {
-        super(30, 3, "Коричневый", 1);
+        super(30, 3, "Желто-коричневый", 1);
     }
 
     @Override
@@ -22,10 +22,5 @@ public class Hen extends Bird {
         System.out.printf("Height: %s\n", this.height);
         System.out.printf("Weight: %.3f\n", this.weight);
         System.out.printf("Flight's height: %s\n", this.flightHeight);
-    }
-
-    @Override
-    public void showFondling() {
-        System.out.println("Щаз клюну.");
     }
 }
