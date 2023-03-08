@@ -1,12 +1,16 @@
 package Homework2.Animals.Pets;
 
-public class Dog extends Pets{
-    private boolean training;
-    private static int dogNamesCounter = 1;
+import Homework2.Interfaces.ToTrain;
 
-    protected Dog(int height, double weight, String eyesColor, String name, String breed, boolean vaccinations,
-            String woolColor, String birthday) {
+public class Dog extends Pets implements ToTrain {
+    private boolean training;
+    private static int dogNamesCounter;
+    static {dogNamesCounter = 1;}
+
+    public Dog(int height, double weight, String eyesColor, String name, String breed, boolean vaccinations,
+            String woolColor, String birthday, boolean training) {
         super(height, weight, eyesColor, name, breed, vaccinations, woolColor, birthday);
+        this.training = training;
     }
 
     public Dog() {
@@ -14,11 +18,12 @@ public class Dog extends Pets{
         this.training = false;
     }
 
-
+    @Override
     public void showFondling() {
         System.out.println("Я счастливый пёс!");
     }
 
+    @Override
     public void makeSound() {
         System.out.println("Гав! Гав! Гав!");
     }
@@ -37,4 +42,12 @@ public class Dog extends Pets{
     }
     
     public boolean getTraining(){return this.training;}
+
+    @Override
+    public final void toTrain(boolean toTrain){
+        if(this.training){
+            System.out.printf("Собака по кличке %s уже дрессированная.", this.name);
+        }else
+            this.training = toTrain;
+    }
 }
