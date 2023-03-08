@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class UserInterface {
-    private static final AZooManager manager = new ZooManager(new AnimalCreator(new AnimalParamCreator()), new Zoo());
+    private static final AZooManager manager = new ZooManager(new ZooAnimalCreator(new AnimalParamCreator()), new Zoo());
     private static final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private static boolean isWork = true;
 

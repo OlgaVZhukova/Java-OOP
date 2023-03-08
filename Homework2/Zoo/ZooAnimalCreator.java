@@ -1,5 +1,5 @@
 package Homework2.Zoo;
 
-public class AnimalCreator {
+public class ZooAnimalCreator {
     
 }
