@@ -1,9 +1,9 @@
 package Homework2.Animals.Pets;
 
-public abstract class Pets {
-    protected int height;
-    protected double weight;
-    protected String eyesColor;
+import Homework2.Animals.*;
+import Homework2.Interfaces.ShowFondling;
+
+public abstract class Pets extends Animals implements ShowFondling {
     public String name;
     public String breed;
     public boolean vaccinations;
@@ -11,13 +11,13 @@ public abstract class Pets {
     public String birthday;
 
     protected Pets(int height, double weight, String eyesColor, String name, String breed, boolean vaccinations, String woolColor, String birthday) {
-        this.height = height;
-        this.weight = weight;
-        this.eyesColor = eyesColor;
+        super(height, weight, eyesColor);
         this.name = name;
         this.breed = breed;
         this.vaccinations = vaccinations;
         this.woolColor = woolColor;
         this.birthday = birthday;
     }
+    @Override
+    public abstract void showFondling();
 }
