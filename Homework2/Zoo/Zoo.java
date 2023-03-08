@@ -52,4 +52,9 @@ public class Zoo extends AbstractZoo {
         }
         this.zoo = tmp;
     }
+
+    @Override
+    public Animals[] getAnimal() {
+        return null;
+    }
 }
