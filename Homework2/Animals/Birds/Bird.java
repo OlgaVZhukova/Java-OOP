@@ -6,7 +6,7 @@ public abstract class Bird implements Animals{
     protected int height;
     protected double weight;
     protected String eyesColor;
-    public final int flightHeight;
+    protected int flightHeight; // public final
 
     public Bird(int height, double weight, String eyesColor, int flightHeight) {
         this.height = height;
