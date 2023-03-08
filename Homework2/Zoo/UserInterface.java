@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class UserInterface {
-    private static final AZooManager manager = new ZooManager(new ZooAnimalCreator(new AnimalParamCreator()), new Zoo());
+    private static final ZooManager manager = new ZooManager(new ZooAnimalCreator(new ZooAnimalParamCreator()), new Zoo());
     private static final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private static boolean isWork = true;
 
@@ -18,8 +18,8 @@ public class UserInterface {
         switch (Integer.parseInt(reader.readLine())){
             case (1) -> manager.printInfo();
             case (2) -> manager.printAllInfo();
-            case (3) -> manager.playCry();
-            case (4) -> manager.playAllCry();
+            case (3) -> manager.makeSound();
+            case (4) -> manager.makeAllSounds();
         }
     }
 
@@ -52,7 +52,7 @@ public class UserInterface {
     }
 
     public static void run() throws IOException {
-        System.out.println("Welcome to our zoo!!!\n");
+        System.out.println("Добро пожаловать в наш Зоопарк!\n");
         while (isWork){
             int operation = getOperation();
             switch (operation){
