@@ -1,17 +1,13 @@
 package Homework2.Animals.Birds;
 
-import Homework2.Animals.Animals;
+import Homework2.Interfaces.Flight;
+import Homework2.Animals.*;
 
-public abstract class Bird implements Animals{
-    protected int height;
-    protected double weight;
-    protected String eyesColor;
+public abstract class Bird extends Animals implements Flight {
     protected int flightHeight; // public final
 
     public Bird(int height, double weight, String eyesColor, int flightHeight) {
-        this.height = height;
-        this.weight = weight;
-        this.eyesColor = eyesColor;
+        super(height, weight, eyesColor);
         this.flightHeight = flightHeight;
     }
 
