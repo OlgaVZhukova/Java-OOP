@@ -1,8 +1,9 @@
 package Homework2.Zoo;
 
 import Homework2.Animals.*;
+import Homework2.AbstractClasses.AbstractZoo;
 
-public class Zoo {
+public class Zoo extends AbstractZoo {
     public Animals[] getZoo() {
         return zoo;
     }
@@ -13,6 +14,7 @@ public class Zoo {
         this.zoo = new Animals[10];
     }
 
+    @Override
     public void addAnimal(int index, Animals animal){
         if(index < 0) index = 0;
 
@@ -34,6 +36,7 @@ public class Zoo {
         this.addAnimal(0,animal);
     }
 
+    @Override
     public void delAnimal(int index){
         if(index > this.zoo.length-1){
             System.out.println("Index out of bonds");
