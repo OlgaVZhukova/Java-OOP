@@ -1,20 +1,14 @@
 package Homework2.Animals.WildAnimals;
 
+import Homework2.Animals.*;
 
-public abstract class WildAnimals {
-    protected int height;
-    protected double weight;
-    protected String eyesColor;
-    public String habitat;
-    public String dateDiscovery;
+public abstract class WildAnimals extends Animals {
+    protected String habitat;
+    protected String dateDiscovery;
 
     protected WildAnimals(int height, double weight, String eyesColor, String habitat, String dateDiscovery) {
-        this.height = height;
-        this.weight = weight;
-        this.eyesColor = eyesColor;
+        super(height, weight, eyesColor);
         this.habitat = habitat;
         this.dateDiscovery = dateDiscovery;
-    }
-    public abstract void makeSound();
-    public abstract void printAnimalInfo();    
+    }  
 }
