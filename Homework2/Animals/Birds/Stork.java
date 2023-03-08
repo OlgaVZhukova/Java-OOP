@@ -7,7 +7,7 @@ public class Stork extends Bird {
     }
 
     public Stork() {
-        super(70, 2, "Серый", 100);
+        super(120, 5, "Серый", 2000);
     }
 
     @Override
@@ -22,10 +22,5 @@ public class Stork extends Bird {
         System.out.printf("Height: %s\n", this.height);
         System.out.printf("Weight: %.3f\n", this.weight);
         System.out.printf("Flight's height: %s\n", this.flightHeight);
-    }
-
-    @Override
-    public void showFondling() {
-        System.out.println("Мне нравится эта крыша, совью-ка я тут гнездо!");
     }
 }
