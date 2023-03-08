@@ -2,8 +2,6 @@ package Homework2.Zoo;
 
 import Homework2.AbstractClasses.AnimalParamCreator;
 
-import Homework2.AbstractClasses.AnimalParamCreator;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
