@@ -1,6 +1,8 @@
 package Homework2.Animals.WildAnimals;
 
-public class Wolf extends WildAnimals{
+import Homework2.Interfaces.BeAlpha;
+
+public class Wolf extends WildAnimals implements BeAlpha {
     private boolean alpha;
 
     public Wolf(int height, double weight, String eyesColor, String habitat, String dateDiscovery, boolean alpha) {
@@ -29,5 +31,11 @@ public class Wolf extends WildAnimals{
         System.out.printf("Alpha: %s\n", this.alpha);
     }
 
-    public boolean getLeader(){return this.alpha;}
+    public boolean getAlpha(){return this.alpha;}
+
+    @Override
+    public boolean beAlpha(Boolean alpha) {
+        this.alpha = alpha;
+        return alpha;
+    }
 }
