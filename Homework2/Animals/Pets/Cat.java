@@ -1,10 +1,13 @@
 package Homework2.Animals.Pets;
 
-public class Cat extends Pets{
-    private final boolean woolPresence;
-    private static int catNamesCounter = 1;
+import Homework2.Interfaces.GetWhool;
 
-    protected Cat(int height, double weight, String eyesColor, String name, String breed, boolean vaccinations, String woolColor, String birthday, boolean woolPresence) {
+public class Cat extends Pets implements GetWhool {
+    private final boolean woolPresence;
+    private static int catNamesCounter;
+    static {catNamesCounter = 1;}
+
+    public Cat(int height, double weight, String eyesColor, String name, String breed, boolean vaccinations, String woolColor, String birthday, boolean woolPresence) {
         super(height, weight, eyesColor, name, breed, vaccinations, woolColor, birthday);
         this.woolPresence = woolPresence;
     }
@@ -14,10 +17,11 @@ public class Cat extends Pets{
         this.woolPresence = true;
     }
 
+    @Override
     public void showFondling() {
         System.out.println("Я счастливый котик!");
     }
-
+    @Override
     public void makeSound() {
         System.out.println("Мррррр-мяу!");
     }
@@ -34,5 +38,6 @@ public class Cat extends Pets{
         System.out.printf("Vaccinations: %b\n", this.vaccinations);
         System.out.printf("Wool presence: %b\n", this.woolPresence);
     }
-    public boolean getWool(){ return this.woolPresence;}
+    @Override
+    public boolean getWool(){return this.woolPresence;}
 }
