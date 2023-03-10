@@ -4,8 +4,32 @@ import Homework3.Figure;
 
 public class Circle extends Figure {
     private double radius;
+    private double perimeter;
+    private double area;
+    final double PI = 3.14;
 
-    public String getArea(Figure obj) {
-        String result = String.format("%s\nS: %.2f", obj.getClass().getSimpleName(), obj.getArea());
-        return result;
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    public double getRadius() {
+        return this.radius;
+    }
+
+    @Override
+    public double getPerimeter() {
+        perimeter = this.radius * 2 * PI;
+        return this.perimeter;
+    }
+
+    @Override
+    public double getArea() {
+        area = this.radius * this.radius * PI;
+        return this.area;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%sfigureName: %s\nРадиус: %d\nПериметр: %d\nПлощадь: %d", super.toString(), this.radius, this.perimeter, this.area);
+    }
 }

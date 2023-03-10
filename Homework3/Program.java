@@ -1,6 +1,6 @@
 package Homework3;
 
-//import классы/абстрактные
+//import Homework3.Figure;
 
 public class Program {
     public static void getFigureInfo(Figure figure){

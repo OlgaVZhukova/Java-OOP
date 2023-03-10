@@ -1,6 +1,9 @@
 package Homework3;
 
-public abstract class Figure { //TO DO: дописать implements методы посчитать периметр и посчитать площадь фигуры
+import Homework3.Interfaces.GetArea;
+import Homework3.Interfaces.GetPerimeter;
+
+public abstract class Figure implements GetArea, GetPerimeter {
     /*public abstract double getArea();
 
     public String getInfo(Figure obj) {
