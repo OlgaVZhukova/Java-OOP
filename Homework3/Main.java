@@ -1,6 +1,7 @@
 package Homework3;
 
 import java.util.ArrayList;
+import Homework3.Figures.*;
 
 public class Main {
     public static void main(String[] args) {
