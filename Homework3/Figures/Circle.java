@@ -1,19 +1,22 @@
 package Homework3.Figures;
 
-import Homework3.Figure;
+import Homework3.Exceptions.NegativeValueException;
+import Homework3.Interfaces.GetArea;
+import Homework3.Interfaces.GetPerimeter;
 
-public class Circle extends Figure {
+public class Circle implements GetArea, GetPerimeter {
     private double radius;
     private double perimeter;
     private double area;
     final double PI = 3.14;
 
-    public Circle(double radius) {
+    public Circle(double radius) throws NegativeValueException {
+        if (radius <= 0) throw new NegativeValueException("Radius must be more than zero");
         this.radius = radius;
     }
 
-    public double getRadius() {
-        return this.radius;
+    public Circle() throws NegativeValueException{
+        this.radius = 7;
     }
 
     @Override
@@ -30,6 +33,6 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return String.format("%sfigureName: %s\nРадиус: %d\nПериметр: %d\nПлощадь: %d", super.toString(), this.radius, this.perimeter, this.area);
+        return String.format("Круг\nРадиус: %d", this.radius);
     }
 }
