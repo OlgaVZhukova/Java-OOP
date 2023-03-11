@@ -1,6 +1,6 @@
-package OOPDraftFigures.Figures;
+package Homework3.Figures;
 
-import OOPDraftFigures.Exceptions.*;
+import Homework3.Exceptions.*;
 
 public class Square extends Rectangle {
     public Square(int side) throws NegativeValueException, IncorrectTriangleException{
