@@ -1,7 +1,7 @@
 package Homework3;
 
 import Homework3.Figures.*;
-//import Homework3
+import Homework3.Exceptions.*;
 
 public class Program {
     public static void main(String[] args)
