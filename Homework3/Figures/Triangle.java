@@ -1,6 +1,6 @@
-package OOPDraftFigures.Figures;
+package Homework3.Figures;
 
-import OOPDraftFigures.Exceptions.*;
+import Homework3.Exceptions.*;
 
 public class Triangle extends Polygon {
     protected int[] sides;
@@ -14,15 +14,6 @@ public class Triangle extends Polygon {
         this(3, 4, 5);
     }
 
-    /*@Override
-    public double getPerimeter() {
-        double result = 0;
-        for (int side : sides) {
-            result += side;
-        }
-        return result;
-    }*/
-
     @Override
     public double getArea() {
         double p = getPerimeter() / 2;
@@ -35,11 +26,5 @@ public class Triangle extends Polygon {
     @Override
     public String toString() {
         return String.format("Треугольник\nСторона a: %d\nСторона b: %d\nСторона c: %d", sides[0], sides[1], sides[2]);
-    }
-
-    @Override
-    public double getPerimeter() {
-        // TODO Auto-generated method stub
-        return 0;
     }
 }
