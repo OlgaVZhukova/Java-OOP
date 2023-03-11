@@ -2,8 +2,6 @@ package Homework1;
 
 
 import java.util.ArrayList;
-import Homework1.Product;
-import Homework1.ChildClasses.*;
 import Homework1.SubClasses.*;
 
 public class Main {
