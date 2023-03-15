@@ -163,9 +163,52 @@ public class ArrayList<T> {
         }
     }
 
+    public void InsertionSort() throws NonComparableTypeException {
+        T tmp = this.data[0];
+        if (tmp instanceof Comparable) {
+            for (int i = 1; i < this.getLength(); i++) {
+                for (int j = i; j > 0; j--) {
+                    Comparable<T> elem = (Comparable)this.data[j];
+                    T prevElem = this.data[j - 1];
+                    if (elem.compareTo(prevElem) < 0) {
+                        swap(j, j - 1);
+                    } else {
+                        break;
+                    }
+                }
+            }
+        } else {
+            throw new NonComparableTypeException(tmp.getClass().getSimpleName());
+        }
+    }
 
+    public void SelectionSort() throws NonComparableTypeException {
+        T min = this.data[0];
+        if (min instanceof Comparable) {
+            for (int i = 0; i < this.getLength(); i++) {
+                min = this.data[i];
+                int min_idx = i;
 
+                for (int j = i; j < this.getLength(); j++) {
+                    Comparable<T> elem = (Comparable<T>)this.data[j];
+                    if (elem.compareTo(min) < 0) {
+                        min = this.data[j];
+                        min_idx = j;
+                    }
+                }
 
+                if (i != min_idx) {
+                    swap(i, min_idx);
+                }                
+            }
+        } else {
+            throw new NonComparableTypeException(min.getClass().getSimpleName());
+        }
+    }
 
-
+    private void swap(int i, int j) {
+        T tmp = this.data[i];
+        this.data[i] = this.data[j];
+        this.data[j] = tmp;
+    }
 }
