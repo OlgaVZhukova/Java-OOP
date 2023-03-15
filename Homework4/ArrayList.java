@@ -34,7 +34,21 @@ public class ArrayList<T> {
         System.out.print("]\n");
     }
 
-    // TO DO: Вставка в массив
+    public void add(T element) {
+        if (this.length == this.data.length) {
+            addLenth();
+        }
+        this.data[this.length++] = element;
+    }
+
+    private void addLenth() {
+        int newlen = this.getLength() + 1;
+        T[] newData = (T[]) new Object[newlen];
+        for (int i = 0; i < this.getLength(); i++) {
+            newData[i] = this.data[i];
+        }
+        this.data = newData;
+    }
 
     // TO DO: Удаление по индексу
 
