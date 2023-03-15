@@ -117,6 +117,52 @@ public class ArrayList<T> {
         return result;
     }
 
+    public int findIDX(T element){
+        
+        int count = 0;
+        for (T t : data) {
+            if (t == element){
+                return count;
+            }
+            count++;
+        }
+        return -1;
+    }
+
+    public boolean findData(T element){
+        for (T t : data) {
+            if (t == element){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void BubbleSort() throws NonComparableTypeException {
+        T tmp = this.data[0];
+        if (tmp instanceof Comparable) {
+            for (int i = 0; i < this.getLength() - 1; i++) {
+                boolean hasSwap = false;
+                
+                for (int j = 0; j < this.getLength() - i - 1; j++) {
+                    Comparable<T> elem = (Comparable<T>)this.data[j];
+                    T nextElem = this.data[j + 1];
+                    if (elem.compareTo(nextElem) > 0) {
+                        swap(j, j + 1);
+                        hasSwap = true;
+                    }
+                }
+                
+                if (!hasSwap) {
+                    break;
+                }
+            }
+        }
+        else {
+            throw new NonComparableTypeException(tmp.getClass().getSimpleName());
+        }
+    }
+
 
 
 
