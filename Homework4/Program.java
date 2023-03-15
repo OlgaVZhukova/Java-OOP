@@ -29,12 +29,30 @@ public class Program {
         System.out.println(intList.findIDX(87)); // Поиск элемента по индексу (если его нет то возвращает -1)
         System.out.println(intList.findData(874)); // Проверка наличия элемента в массиве. Возвращает true, если элемент в массиве есть, false – нет.
 
-        // TO DO: Пузырьковая сортировка
+        try {
+            intList.BubbleSort();
+            System.out.print("Результат:"); // Пузырьковая сортировка
+            intList.printArray();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
 
-        // TO DO: печать
-
-
-
+        ArrayList<String> stringList = new ArrayList<>();
+        stringList.add("Компьютер"); // добавление элемента
+        stringList.add("Монитор");
+        stringList.add("Мышка");
+        stringList.add("Клавиатура");
+        stringList.add("Лампа");
+        stringList.add("Глобус");
+        stringList.add("Книга");
+        stringList.add("Чашка");
+        stringList.add("Ручка");
+        stringList.add("Кактус");
+        stringList.add("Телефон");
+        stringList.add("Ежедневник");
+        stringList.printArray(); // печать
+        stringList.remForIdx(1);
+        stringList.printArray();
         
     }
 }
