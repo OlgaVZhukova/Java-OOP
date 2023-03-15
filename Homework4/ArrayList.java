@@ -71,5 +71,12 @@ public class ArrayList<T> {
         }
     }
 
-    // TO DO: Удаление элемента по значению
+    public void removeData(T element) {
+        for (int i = 0; i < data.length; i++) {
+            if (data[i] == element) {
+                remForIdx(i);
+                i--;
+            }
+        }
+    }
 }
