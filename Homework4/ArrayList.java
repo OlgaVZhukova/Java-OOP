@@ -50,7 +50,26 @@ public class ArrayList<T> {
         this.data = newData;
     }
 
-    // TO DO: Удаление по индексу
+    public void remForIdx(int idx) throws IndexOutOfBoundsException {
+        if (idx < 0 || idx > this.getLength()) {
+            System.out.printf("Index %d out of bounds for length %d\n", idx, this.getLength());
+        } else {
+            int newlen = this.getLength() - 1;
+            T[] newData = (T[]) new Object[newlen];
+            int i = 0;
+            while (i < idx) {
+                newData[i] = this.data[i];
+                i++;
+            }
+            i++;
+            while (i < this.getLength()) {
+                newData[i - 1] = this.data[i];
+                i++;
+            }
+            this.data = newData;
+            this.length--;
+        }
+    }
 
     // TO DO: Удаление элемента по значению
 }
