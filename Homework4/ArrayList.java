@@ -79,4 +79,47 @@ public class ArrayList<T> {
             }
         }
     }
+    public int minData() {
+        int min = (int) this.data[0];
+        for (int i = 0; i < data.length; i++) {
+            if (min > (int) this.data[i]) {
+                min = (int) this.data[i];
+            }
+        }
+
+        return min;
+    }
+
+    public int maxData() {
+        int max = (int) this.data[0];
+        for (int i = 0; i < data.length; i++) {
+            if (max < (int) this.data[i]) {
+                max = (int) this.data[i];
+            }
+        }
+
+        return max;
+    }
+
+    public int sumData(){
+        int result = 0;
+        for (int i = 0; i < data.length; i++) {
+            result += (int) this.data[i]; 
+        }
+        return result;
+    }
+
+    public int multData(){
+        int result = 1;
+        for (int i = 0; i < data.length; i++) {
+            result *= (int) this.data[i]; 
+        }
+        return result;
+    }
+
+
+
+
+
+
 }
