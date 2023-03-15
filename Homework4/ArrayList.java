@@ -23,7 +23,16 @@ public class ArrayList<T> {
         return this.data;
     }
 
-    // TO DO: Печать массива
+    public void printArray() {
+        System.out.print("[");
+        for (int i = 0; i < this.getLength(); i++) {
+            if (i != this.getLength() - 1)
+                System.out.print(this.data[i] + ",");
+            else
+                System.out.print(this.data[i]);
+        }
+        System.out.print("]\n");
+    }
 
     // TO DO: Вставка в массив
 
