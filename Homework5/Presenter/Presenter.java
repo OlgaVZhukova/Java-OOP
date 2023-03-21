@@ -9,14 +9,18 @@ public class Presenter<T extends CommonModel>  {
     UI v;
     T model;
 
+    /**
+     * Конструктор объекта типа Presenter
+     * @param v - объект типа UI
+     * @param model - объект типа CommonModel
+     */
+
     public Presenter(UI v, T model) {
         this.model = model;
         this.v = v;
     }
 
-    /**
-     * Основной метод, объединяющий получений значений, выбор операции, получение результата и логирование
-     */
+    // Основной метод, объединяющий получений значений, выбор операции, получение результата и логирование
     public void runOperation() {
         Log log = new LogTXT();
         String txt = "";

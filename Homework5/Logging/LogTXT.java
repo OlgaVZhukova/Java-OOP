@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.FileWriter;
 
 public class LogTXT implements Log {
+    
     @Override
     public String getExpression(Double x, Double y, Double result, Integer operation) {
         String op = "";
