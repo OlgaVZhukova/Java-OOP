@@ -47,7 +47,7 @@ public class Presenter<T>
                 }
             case 3:
                 {
-                    MultiplationModel model = new MultiplationModel();
+                    MultiplicationModel model = new MultiplicationModel();
                     model.setX(x);
                     model.setY(y);
                     Double res = model.result();
